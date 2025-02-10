@@ -1,0 +1,23 @@
+.scroll-container {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px;
+            scrollbar-width: thin;
+            scrollbar-color: #007bff #f1f1f1;
+        }
+
+        /* Untuk browser berbasis Webkit (Chrome, Safari) */
+        .scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: #007bff;
+            border-radius: 10px;
+        }
+
+        .scroll-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }

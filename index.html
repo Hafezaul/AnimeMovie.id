@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AnimeMovie.id</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--swiper link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"r/>
+<!--data aos-->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!--sweatalert-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!--Navbar start-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <a class="navbar-brand ps-5" href="#"> 
+        AnimeMovie
+      </a>
+     
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">AnimeMovie</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active text-dark" aria-current="page" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Genre Anime
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Adventure</a></li>
+                <li><a class="dropdown-item" href="#">Comedy</a></li>
+                <li><a class="dropdown-item" href="#">Drama</a></li>
+                <li><a class="dropdown-item" href="#">Fantasy</a></li>
+                <li><a class="dropdown-item" href="#">Horror</a></li>
+                <li><a class="dropdown-item" href="#">Magic</a></li>
+                <li><a class="dropdown-item" href="#">Mystery</a></li>
+                <li><a class="dropdown-item" href="#">Romance</a></li>
+                <li><a class="dropdown-item" href="#">Sci-Fi</a></li>
+                <li><a class="dropdown-item" href="#">Slice of Life</a></li>
+                <li><a class="dropdown-item" href="#">Sports</a></li>
+              </ul>
+            </li>
+            
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="support.html">Support us</a>
+          </li>
+        </div>
+      </div>
+      </div>
+    </nav>
+    <!--Navbar end-->
+    <br>
+<div class="container">
+  <div class="container-fluid">
+    <!--Searching tools start-->
+        <div class="search-container">
+          <input type="text" id="searchInput" class="form-control" placeholder="Cari Anime..." onkeyup="searchFunction()">
+          <ul id="searchResults" class="dropdown-menu">
+            <!-- Hasil pencarian akan ditampilkan di sini -->
+          </ul>
+        </div>    
+        <br><br><br>
+    <!--Searching tools end-->
+       <!--anime best start-->
+     <!-- Slider main container -->
+<div class="swiper w-100">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+      <img src="img/bluelock.webp" class="img-fluid w-100 h-50" alt="Bluelock" style="aspect-ratio: 16/9; object-fit: cover;">
+      <br>
+        <h3 class="text-center">Blue Lock</h3>
+        <p class="text-center text-secondary">Genre : Olahraga, Shounen</p>
+    </div>
+    <div class="swiper-slide">
+    <a href="https://www.youtube.com/playlist?list=PLPanbgyToztZJLy-bGH_tD6rA1ObhW7iz" target="_blank">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPBPPKx4zQCyKSl2E1qQ3oqjAqav9VWOzyCA&s" alt="Zenshu Banner" class="img-fluid w-100 h-50" style="aspect-ratio: 16/9; object-fit: cover;">
+    </a>
+      <br>
+      <h3 class="text-center">Attack on Titan</h3>
+      
+      <p class="text-center text-secondary">Genre : Olahraga, Shounen</p>
+    </div>
+    <div class="swiper-slide">
+      <a href="https://www.youtube.com/playlist?list=PLPanbgyToztaeQFokLfCgkmP_C3szkxCR" target="_blank">
+      <img src="img/dandadan.jpeg" alt="Dandadan" class="img-fluid w-100 h-50" style="aspect-ratio: 16/9; object-fit: cover;">
+      </a>
+      <br>
+      <h3 class="text-center">Dandadan</h3>
+      <p class="text-center text-secondary">Genre : Supernatural, Aksi, Komedi, Horor</p>
+    </div>
+  </div>
+
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+
+<style>
+  /* Tambahan CSS untuk memastikan responsivitas */
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Batasi tinggi agar tidak terlalu besar */
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .swiper-slide img {
+      max-height: 300px; /* Kurangi tinggi untuk layar kecil */
+    }
+  }
+</style>
+
+       <!--anime best end-->
+      <!--anime populer start-->
+          <h4 class="text-center m-5" data-aos="fade-up">Anime trending lainnya</h4>
+      <!--anime populer start-->
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <a href="./playingStudio/spy-x-family.html">
+            <img src="trend/anya.jpeg" class="img img-fluid h-100 w-100" alt="Banner Anime 1" data-aos="fade-right">
+            </a>
+          </div>
+          <div class="col">
+           <a href="./playingStudio/dandadanPlay.html">
+            <img src="trend/serial-anime-dandadan.jpeg" class="img img-fluid" alt="Banner Anime 2" data-aos="fade-left">
+          </a> 
+          </div>
+        </div>
+        <div class="row mt-5"  data-aos="fade-up">
+          <div class="col">
+            <img src="https://styles.redditmedia.com/t5_3hs4s7/styles/image_widget_h1a14uy3dqia1.jpg?format=pjpg&s=49df6b2135cb5157d44ea0b5ca52d926e776740b" class="img-fluid mt-3" alt="Banner Anime 3">
+          </div>
+          
+          <div class="col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe-s5V1cPpbqLZY976Q9XTQ__gSpoKKpiXbrPsUNax5UusdDdruFJa5vYRXso_pZ3i35E&usqp=CAU" class="img-fluid h-100 w-100 mt3" alt="Banner Anime 4">
+          </div>
+          <div class="col">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMbmVYJfNRD1uKn_MQh7hpW_dDZNX8ICGy9ZQA7hqOQm_UXvMHs5Wa26Wq2ZXnwSKjJ9U&usqp=CAU" class="img-fluid h-100 w-100 " alt="Banner Anime 5">
+          </div>
+        </div>
+      </div>
+    <!--anime populer start-->
+    <br><br>
+
+    <h3 class="text-center m-3">Anime Populer Lainnya</h3>
+<div class="scroll-container">
+    <button id="scrollLeft" class="scroll-btn"><i class="bi bi-arrow-bar-left"></i></button>
+    <div class="card-wrapper1">
+        <div class="card1">
+            <img src="assets/cote.jpg" alt="Class room of the elite" class="img img-fluid">
+        </div>
+        <div class="card1">
+            <img src="assets/bc.jpeg" alt="Black Clover" class="img img-fluid">
+        </div>
+        <div class="card1">
+            <img src="assets/watamote.jpeg" alt="Watamote" class="img img-fluid">
+        </div>
+        <div class="card1">
+            <img src="assets/alya.jpeg" alt="Roshidere" srcset="" class="img img-fluid">
+        </div>
+        <div class="card1">
+            <img src="assets/bocchi.jpeg" alt="Bocchi the rock!" class="img img-fluid">
+        </div>
+        <div class="card1">
+            <img src="assets/kimi.jpeg" alt="Kimi no nawa" class="img img-fluid">
+        </div>
+        <div class="card1">
+            <img src="assets/k-on.jpg" alt="K-on" class="img img-fluid">
+        </div>
+        <div class="card1">
+            <img src="assets/tenki.jpg" alt="Tenki no ko" class="img img-fluid">
+        </div>
+        <div class="card1">
+            <img src="assets/suzume.jpeg" alt="Suzume no tojimmari" class="img img-fluid">
+        </div>
+        <div class="card1">
+            <img src="assets/Koeno.jpg" alt="Koe no katachi" class="img img-fluid">
+        </div>
+    </div>
+    <button id="scrollRight" class="scroll-btn"><i class="bi bi-arrow-bar-right"></i></button>
+</div>
+    <!--anime populer end-->
+  </div>
+</div>
+
+
+<br>
+
+  
+
+<br><br><!--footer start-->
+<footer class="bg-light text-dark py-5">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-4 mb-4">
+                <a href="#" class="d-flex align-items-center text-decoration-none text-dark">
+                    <span class="fs-4 fw-semibold">AnimeMovie</span>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <h5 class="text-uppercase fw-bold">Dukung kami</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://flowbite.com/" class="text-dark text-decoration-none">Saweria</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5 class="text-uppercase fw-bold">Follow Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.linkedin.com/in/farisiskandarhafidz/" class="text-dark text-decoration-none">Linkedin</a></li>
+                    <li><a href="https://github.com/Hafezaul" class="text-dark text-decoration-none">Github</a></li>
+                    <li><a href="https://www.instagram.com/al_hafidz_295/" class="text-dark text-decoration-none">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@halia_fiz?is_from_webapp=1&sender_device=pc" class="text-dark text-decoration-none">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5 class="text-uppercase fw-bold">Sumber anime</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.youtube.com/@MuseIndonesia" class="text-dark text-decoration-none">Musee Indonesia</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <span class="text-muted">© 2025 AnimeMovie.Id. All Rights Reserved.</span>
+            <div>
+                <a href="https://www.linkedin.com/in/farisiskandarhafidz/" class="text-dark me-3"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/Hafezaul" class="text-dark me-3"><i class="bi bi-github"></i></a>
+                <a href="https://www.instagram.com/al_hafidz_295/" class="text-dark"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+  </footer>
+  
+<!-- Bootstrap Icons CDN (Needed for icons) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+<!--footer end-->
+
+<!--swiper link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+             AOS.init();
+      </script>
+           
+    <!--cdn bootsrap-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <!--sweat alert-->
+      <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.15.10/dist/sweetalert2.all.min.js
+"></script>
+    <script src="main.js"></script>
+ 
+  </body>
+</html>
